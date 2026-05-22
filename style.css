@@ -1,0 +1,171 @@
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF9F6;
+    font-family: "Inter", sans-serif;
+    color: #2b2b2b;
+    line-height: 1.5;
+}
+
+
+/* MAIN CONTENT */
+.section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 28px 18px;
+}
+
+
+/* MAIN TITLE */
+h1 {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 6rem;
+    line-height: 1.05;
+    margin-bottom: 10px;
+    color: #B85B4F;
+    letter-spacing: -2px;
+    font-weight: 700;
+}
+
+
+/* SUBTITLE */
+.section > p:first-of-type {
+    text-align: center;
+    font-size: 2rem;
+    color: #6b7280;
+    max-width: 800px;
+    margin: 0 auto 28px auto;
+    line-height: 1.6;
+}
+
+
+/* HERO IMAGE SECTION */
+.hero-image-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+
+/* HERO IMAGE */
+.hero-image {
+    width: 75%;
+    max-width: 760px;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08),
+        0 16px 36px rgba(0,0,0,0.06);
+}
+
+
+/* CHART CARDS */
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 24px;
+    margin-bottom: 18px;
+    border-radius: 22px;
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.05),
+        0 10px 20px rgba(0,0,0,0.04);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* CARD HOVER */
+.chart-container:hover {
+    transform: translateY(-2px);
+}
+
+
+/* CHART TITLES */
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #934136;
+    font-weight: 650;
+}
+
+
+/* CENTER CHARTS */
+.chart-container > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* VEGA EMBED */
+.vega-embed {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+/* STORY TEXT */
+.story-text {
+    max-width: 920px;
+    margin: 10px auto 38px auto;
+    padding: 0 12px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.95;
+    font-weight: 400;
+    color: #3f3f46;
+    font-family: "Manrope", sans-serif;
+}
+
+
+/* CONCLUSION */
+.conclusion {
+    font-size: 1.55rem;
+    line-height: 2;
+    font-weight: 600;
+    color: #934136;
+    max-width: 950px;
+    margin:
+        20px auto 50px auto;
+}
+
+
+/* TOOLTIP */
+div.tooltip {
+    position: absolute;
+    background: white;
+    border-radius: 12px;
+    padding: 8px 12px;
+    box-shadow:
+        0 6px 18px rgba(0,0,0,0.12);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+
+/* FADE-IN */
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+/* SHOWN */
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+

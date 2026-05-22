@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>The Asian American Dream?</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <section class="section">
+
+        <h1>The Asian American Dream?</h1>
+        <p>Income, Education, and Inequality Among Asian Americans in Boston</p>
+
+        <section class="hero-image-section fade-in">
+            <img 
+                src="aaDream image.png" 
+                alt="Boston Asian American Communities"
+                class="hero-image"
+            >
+        </section>
+
+         <p class="story-text fade-in">
+            Boston's population of almost ~670k people, Asian Americans make up 10.4% of the city’s population. That is ~72k people, but this number alone does 
+            not tell the full story. Looking at Asian Americans as one single group can hide major differences in population size, income, education, and poverty.
+        </p>
+
+        <div class="chart-container fade-in">
+            <h2>Boston Demographics</h2>
+            <div id="chart1"></div>
+        </div>
+
+        <p class="story-text fade-in">
+            Within Boston’s Asian population, the largest subgroup is Chinese residents, followed by Indian and Vietnamese residents. 
+            These differences matter because larger and smaller communities may experience Boston differently, especially when it comes 
+            to access to resources, education, and economic opportunity.
+        </p>
+
+        <div class="chart-container fade-in">
+            <h2>Asian Population By Subgroups</h2>
+            <div id="chart2"></div>
+        </div>
+
+        <p class="story-text fade-in">
+            Income also varies widely across Asian subgroups. Some groups show much higher household income ranges, while others fall 
+            far lower. We can clearly see that Asian Americans do not share one uniform economic experience.
+        </p>
+
+        <div class="chart-container fade-in">
+            <h2>Median Household Income Range by Asian Subgroup</h2>
+            <div id="chart3"></div>
+        </div>
+
+        <p class="story-text fade-in">
+            Education is another area where the differences become clear. While several Asian subgroups have high rates of bachelor’s 
+            degree attainment, others have much lower rates.
+        </p>
+
+        <div class="chart-container fade-in">
+            <h2>Educational Attainment by Asian Subgroup</h2>
+            <div id="chart4"></div>
+        </div>
+
+        <p class="story-text fade-in">
+            Poverty rates reveal one of the most important parts of the story. Even when some Asian subgroups show high income or 
+            education levels, other groups still have a large portion who are below the offical poverty level. 
+        </p>
+
+        <div class="chart-container fade-in">
+            <h2>Poverty Rate by Asian Subgroup</h2>
+            <div id="bubbleChart"></div>
+        </div>
+
+        <p class="story-text conclusion fade-in">
+            Overall, these charts show that the “model minority” stereotype does not reflect the full reality of Asian Americans 
+            in Boston. While some communities may appear to achieve the American Dream, the data shows that opportunity, income, 
+            education, and stability do not reach every subgroup equally.
+        </p>
+
+    </section>
+
+    <script src="js/colors.js"></script>
+    <script src="js/donut.js"></script>
+    <script src="js/veritcalBar.js"></script>
+    <script src="js/dumbbell.js"></script>
+    <script src="js/horizontal.js"></script>
+    <script src="js/bubble.js"></script>
+    
+    <script>
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                entry.target.classList.remove("show");
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    fadeElements.forEach(element => {
+        fadeObserver.observe(element);
+    });
+</script>
+</body>
+</html>
